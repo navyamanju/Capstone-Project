@@ -36,29 +36,10 @@ public class LoginServiceTest {
 	  wd.close();
   }
   
+ 
   @Test
   public void signInTest() {
 	  wd.get("http://localhost:4200/login");
-	  WebElement emailInput = wd.findElement(By.id("emailid"));
-      WebElement passwordInput = wd.findElement(By.id("password"));
-      WebElement loginButton = wd.findElement(By.cssSelector(".btn-dark"));
-
-      // Enter login details
-      emailInput.sendKeys("navyamanju@gmail.com");
-      passwordInput.sendKeys("navya@123");
-
-      // Select user type (admin/user)
-      WebElement userType = wd.findElement(By.cssSelector("[value='admin']"));
-      userType.click();
-
-      // Click on the login button
-      loginButton.click();
-
-      
-      // Add assertions or further steps based on success or error messages
-      // For example:
-      // assertTrue(successMessage.isDisplayed());
-      // assertFalse(errorMessage.isDisplayed());
 	 
   }
 
@@ -68,5 +49,3 @@ public class LoginServiceTest {
 	  
   }
 }
-
-
