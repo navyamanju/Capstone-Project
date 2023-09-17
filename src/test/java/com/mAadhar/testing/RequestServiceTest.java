@@ -25,6 +25,12 @@ public class RequestServiceTest {
 	  }
 
   
+  @AfterTest
+  public void afterClass() {
+	  wd.close();
+  }
+
+
 
   @Test
   public void approveRequestTest() {
