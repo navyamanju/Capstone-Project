@@ -31,7 +31,10 @@ public class LoginServiceTest {
   }
 
   
-
+  @AfterTest
+  public void afterClass() {
+	  wd.close();
+  }
   
   @Test
   public void signInTest() {
