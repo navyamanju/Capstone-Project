@@ -27,44 +27,43 @@ public class RequestServiceTest {
   
   @AfterTest
   public void afterClass() {
-	  wd.close();
+	  driver.close();
   }
-
 
 
   @Test
   public void approveRequestTest() {
-	  wd.get(" http://localhost:4200/adminHome/viewReq");
+	  driver.get("http://localhost:4200/approve");
 	
   }
 
   @Test
   public void denyRequestTest() {
-	  wd.get(" http://localhost:4200/adminHome/viewReq");
+	  driver.get("http://localhost:4200/deny");
 	 
   }
 
   @Test
   public void getAllRequestsTest() {
-	  wd.get(" http://localhost:4200/adminHome/viewReq");
+	  driver.get("http://localhost:4200/veiwAll");
 	 
   }
 
   @Test
   public void storeRequestTest() {
-	  wd.get("  http://localhost:4200/userHome/storeReq");
+	  driver.get("http://localhost:4200/apply");
 	  
   }
- 
+
   @Test
   public void updateAdharTest() {
-	  wd.get("http://localhost:4200/userHome/view");
+	  driver.get("http://localhost:4200/updateaadhar");
 	
   }
 
   @Test
   public void viewmyAdharTest() {
-	  wd.get("http://localhost:4200/userHome/view");
+	  driver.get("http://localhost:4200/viewmyadhar");
 	 
   }
 }
